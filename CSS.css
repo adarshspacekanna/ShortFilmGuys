@@ -1,0 +1,256 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url(222.jpg) no-repeat; 
+     background-size:cover;
+     background-position: center;
+}
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 20px 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    
+
+}
+.logo{
+    font:2em;
+    color:white;
+    user-select: none;
+}
+.navigation a{
+    position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+
+
+}
+ 
+.navigation a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0%;
+    bottom: -7px;
+    background: white;
+    transform-origin: right;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: .5s;
+    }
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+
+
+.navigation .btn-popup{
+width: 130px;
+height: 50px;
+background: transparent;
+border: 2px solid whitesmoke;
+outline: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1.1rem;
+font-weight: 500;
+color: white;
+transition: .5s;
+margin-left: 40px;
+
+}
+.navigation .btn-popup:hover{
+    color: black;
+    background: white;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 410px;
+    background: transparent;
+    border:2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     overflow: hidden;
+     border-radius: 5%;
+     transition:.5s, height .2s ease;
+     transform: scale(0);
+
+
+}
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+    
+}
+.wrapper .form-box.login{
+    transform: translateX(0);
+  transition: .18s ease-in-out;
+}
+.wrapper.active{
+     height: 490px;
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transform: translateX(400px);
+}
+.wrapper.active .form-box.register{
+    transition: none;
+    transition: .18s ease-in-out;
+    transform: translateX(0);
+}
+
+.login-register{
+     font-size: .9em;
+     margin:  25px 0 10px;
+     
+   
+
+}
+.login-register p a{
+   text-decoration: none;
+   color: black;
+   font-weight: 500;
+   
+   
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+    
+}
+.wrapper .icon-close{
+    top: 0%;
+    right: 0%;
+    position: absolute;
+    background:#162938;
+    color: white;
+    width: 9%;
+    height: 9%;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    font-size: 2em;
+    border-bottom-left-radius: 18px;
+    cursor: pointer;
+    z-index: 1;
+}
+.form-box h2{
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    size: 2em;
+   
+}
+.input-box{
+    position:relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid  black;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgba(255, 255, 255, .5);
+    font-weight: 500;
+    pointer-events: none;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+    transition: .5s;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background:transparent;
+    outline: none;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1em;
+    line-height: 50px;
+    color: #162938;
+    
+
+
+}
+.rememberme{
+    font-size: .9em;
+     display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+    font-weight: 500;
+
+}
+
+.rememberme input{
+    accent-color: #162938;
+}
+.rememberme label{
+    margin-right: 19%;
+}
+.rememberme a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.rememberme a:hover{
+    text-decoration: underline;
+    transition: .2s;
+}
+.btn {
+    width:100%;
+    height: 45px;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    border:none;
+    background: #162938;
+    outline: none;
+    color: aliceblue;
+    cursor: pointer;
+
+}
+
+
