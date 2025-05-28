@@ -1,2 +1,2 @@
 # ShortFilmGuys
-The login and the register page
+The initial webpage 
